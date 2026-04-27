@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mc.system.mapper.SysOrgMapper">
+
+    <select id="selectChildren" resultType="com.mc.system.entity.SysOrg">
+        SELECT * FROM sys_org WHERE parent_id = #{parentId} ORDER BY sort
+    </select>
+
+    <select id="selectTree" resultType="com.mc.system.entity.SysOrg">
+        SELECT * FROM sys_org ORDER BY level, sort
+    </select>
+
+    <select id="selectByCode" resultType="com.mc.system.entity.SysOrg">
+        SELECT * FROM sys_org WHERE code = #{code}
+    </select>
+
+</mapper>

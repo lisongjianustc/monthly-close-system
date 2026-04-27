@@ -1,0 +1,40 @@
+# Maven
+target/
+*.jar
+*.class
+!.gitkeep
+
+# Node
+node_modules/
+dist/
+npm-debug.log
+.DS_Store
+
+# IDE
+.idea/
+*.iml
+.vscode/
+*.swp
+
+# Logs
+*.log
+logs/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Build
+*.tgz
+
+# Docker
+docker-compose.yml
+*.log
+
+# Database
+*.sql
+sql/
+
+# OS
+Thumbs.db

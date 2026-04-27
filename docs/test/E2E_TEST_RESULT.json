@@ -1,0 +1,177 @@
+{
+  "timestamp": "2026-04-25T16:32:14.378Z",
+  "total": 28,
+  "passed": 28,
+  "failed": 0,
+  "rate": 100,
+  "results": [
+    {
+      "section": "F01",
+      "item": "页面标题",
+      "pass": true,
+      "note": "title=月结报表管理系统"
+    },
+    {
+      "section": "F01",
+      "item": "输入框存在",
+      "pass": true,
+      "note": "inputs=2"
+    },
+    {
+      "section": "F01",
+      "item": "登录按钮存在",
+      "pass": true,
+      "note": ""
+    },
+    {
+      "section": "F01",
+      "item": "登录成功",
+      "pass": true,
+      "note": "url=http://localhost:3000/dashboard"
+    },
+    {
+      "section": "F02",
+      "item": "组织管理页面加载",
+      "pass": true,
+      "note": "url=http://localhost:3000/system/org"
+    },
+    {
+      "section": "F02",
+      "item": "组织管理内容区域",
+      "pass": true,
+      "note": ""
+    },
+    {
+      "section": "F03",
+      "item": "用户管理页面加载",
+      "pass": true,
+      "note": "url=http://localhost:3000/system/user"
+    },
+    {
+      "section": "F03",
+      "item": "用户管理内容区域",
+      "pass": true,
+      "note": ""
+    },
+    {
+      "section": "F04",
+      "item": "角色管理页面加载",
+      "pass": true,
+      "note": "url=http://localhost:3000/system/role"
+    },
+    {
+      "section": "F04",
+      "item": "角色管理内容区域",
+      "pass": true,
+      "note": ""
+    },
+    {
+      "section": "F05",
+      "item": "期间管理页面加载",
+      "pass": true,
+      "note": "url=http://localhost:3000/system/period"
+    },
+    {
+      "section": "F05",
+      "item": "期间管理内容区域",
+      "pass": true,
+      "note": ""
+    },
+    {
+      "section": "F06",
+      "item": "流程模板页面加载",
+      "pass": true,
+      "note": "url=http://localhost:3000/workflow/template"
+    },
+    {
+      "section": "F06",
+      "item": "流程模板内容区域",
+      "pass": true,
+      "note": ""
+    },
+    {
+      "section": "F07",
+      "item": "流程实例页面加载",
+      "pass": true,
+      "note": "url=http://localhost:3000/workflow/instance"
+    },
+    {
+      "section": "F07",
+      "item": "流程实例内容区域",
+      "pass": true,
+      "note": ""
+    },
+    {
+      "section": "F08",
+      "item": "任务管理页面加载",
+      "pass": true,
+      "note": "url=http://localhost:3000/workflow/task"
+    },
+    {
+      "section": "F08",
+      "item": "任务管理内容区域",
+      "pass": true,
+      "note": ""
+    },
+    {
+      "section": "F09",
+      "item": "数据导入页面加载",
+      "pass": true,
+      "note": "url=http://localhost:3000/data/import"
+    },
+    {
+      "section": "F09",
+      "item": "数据导入内容区域",
+      "pass": true,
+      "note": ""
+    },
+    {
+      "section": "F10",
+      "item": "规则配置页面加载",
+      "pass": true,
+      "note": "url=http://localhost:3000/rule"
+    },
+    {
+      "section": "F10",
+      "item": "规则配置内容区域",
+      "pass": true,
+      "note": ""
+    },
+    {
+      "section": "F11",
+      "item": "异常处理页面加载",
+      "pass": true,
+      "note": "url=http://localhost:3000/exception"
+    },
+    {
+      "section": "F11",
+      "item": "异常处理内容区域",
+      "pass": true,
+      "note": ""
+    },
+    {
+      "section": "F12",
+      "item": "通知管理页面加载",
+      "pass": true,
+      "note": "url=http://localhost:3000/notification"
+    },
+    {
+      "section": "F12",
+      "item": "通知管理内容区域",
+      "pass": true,
+      "note": ""
+    },
+    {
+      "section": "F01",
+      "item": "Dashboard统计卡片",
+      "pass": true,
+      "note": "cards=2"
+    },
+    {
+      "section": "F13",
+      "item": "未登录访问跳转/login",
+      "pass": true,
+      "note": "url=http://localhost:3000/login"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mc.data.mapper.ImportRecordMapper">
+
+    <select id="selectByBatchId" resultType="com.mc.data.entity.ImportRecord">
+        SELECT * FROM import_record WHERE batch_id = #{batchId} ORDER BY row_no ASC
+    </select>
+
+    <select id="selectFailRecords" resultType="com.mc.data.entity.ImportRecord">
+        SELECT * FROM import_record WHERE batch_id = #{batchId} AND status = 'INVALID' ORDER BY row_no ASC
+    </select>
+
+    <select id="countByPeriodAndUnit" resultType="java.lang.Integer">
+        SELECT COUNT(*) FROM import_record WHERE period_id = #{periodId} AND unit_id = #{unitId} AND status = 'VALID'
+    </select>
+
+    <insert id="insertBatchForMySQL" parameterType="java.util.List">
+        INSERT INTO import_record (batch_id, row_no, account_code, account_name, amount,
+        dimension1, dimension2, dimension3, status, error_msg)
+        VALUES
+        <foreach collection="records" item="r" separator=",">
+            (#{r.batchId}, #{r.rowNo}, #{r.accountCode}, #{r.accountName}, #{r.amount},
+            #{r.dimension1}, #{r.dimension2}, #{r.dimension3}, #{r.status}, #{r.errorMsg})
+        </foreach>
+    </insert>
+
+    <update id="updateStatusBatch" parameterType="java.util.List">
+        <foreach collection="records" item="r" separator=";">
+            UPDATE import_record
+            SET status = #{r.status},
+                error_msg = #{r.errorMsg},
+                validate_time = NOW()
+            WHERE id = #{r.id}
+        </foreach>
+    </update>
+
+</mapper>

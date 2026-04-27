@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mc.system.mapper.SysMenuMapper">
+
+    <select id="selectTree" resultType="com.mc.system.entity.SysMenu">
+        SELECT * FROM sys_menu ORDER BY sort
+    </select>
+
+    <select id="selectByUserId" resultType="com.mc.system.entity.SysMenu">
+        SELECT DISTINCT m.* FROM sys_menu m
+        LEFT JOIN sys_role_menu rm ON m.id = rm.menu_id
+        LEFT JOIN sys_user_role ur ON rm.role_id = ur.role_id
+        WHERE ur.user_id = #{userId}
+        ORDER BY m.sort
+    </select>
+
+    <select id="selectByRoleId" resultType="com.mc.system.entity.SysMenu">
+        SELECT m.* FROM sys_menu m
+        LEFT JOIN sys_role_menu rm ON m.id = rm.menu_id
+        WHERE rm.role_id = #{roleId}
+        ORDER BY m.sort
+    </select>
+
+</mapper>
