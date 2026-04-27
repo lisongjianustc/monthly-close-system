@@ -38,3 +38,12 @@ sql/
 
 # OS
 Thumbs.db
+
+# Internal docs (not for GitHub)
+docs/
+
+# Markdown docs in root (except README.md)
+ADMIN_GUIDE.md
+PROGRESS.md
+USER_GUIDE.md
+CLAUDE.md
